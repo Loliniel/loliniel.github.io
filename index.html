@@ -3,9 +3,101 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Alice's Portfolio</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<style>
+			a {
+				color: #FFFFFF;
+			}
+		</style>
+		<script>
+			function showModules() {
+				document.getElementById("bio").style.display = "none";
+				document.getElementById("modules").style.display = "block";
+			}
+
+			function showBio() {
+				document.getElementById("modules").style.display = "none";
+				document.getElementById("bio").style.display = "block";
+			}
+		</script>
 	</head>
 	<body>
-		<h1>Alice's Portfolio</h1>
-		<img src="./lgc.png" alt="me irl" />
+		<div class="container">
+			<header class="py-3">
+				<div class="p-3">
+					<img src="./images/mametchi-pic01.png" style="width: 120px;" alt="me irl" />
+					<span class="h2 p-4">Alice's Portfolio</span>
+				</div>
+				<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+					<div class="container-fluid fs-4 fw-bold">
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item px-3"><a class="nav-link link-light" href="#" onclick="showBio()">Bio</a></li>
+								<li class="nav-item px-3"><a class="nav-link link-light" href="#" onclick="showModules()">Modules</a></li>
+								<li class="nav-item px-3 dropdown">
+									<a href="#" class="nav-link dropdown-toggle link-light" id="navbar-socials" role="button" data-bs-toggle="dropdown" aria-expanded="false">Social Media</a>
+									<ul class="dropdown-menu bg-secondary" aria-labelledby="navbar-socials">
+										<li><a href="https://github.com/Loliniel" class="dropdown-item link-light fw-bold">Github</a></li>
+										<li><a href="https://www.linkedin.com/in/alicegeus/" class="dropdown-item link-light fw-bold">Linkedin</a></li>
+										<li><a href="https://www.youtube.com/@AliceGeus" class="dropdown-item link-light fw-bold">Youtube</a></li>
+										<li><a href="https://www.rentalcorgis.com/" class="dropdown-item link-light fw-bold">Rental Corgis</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<main class="container">
+				<div id="bio" class="container">
+					<h2>Bio</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida, augue vitae posuere egestas, ante nisi eleifend magna, dictum scelerisque urna libero id lorem. Duis magna magna, malesuada sed commodo non, facilisis sit amet risus. Duis varius cursus urna quis tincidunt. Pellentesque nisl lorem, malesuada vitae eros ac, fermentum vestibulum augue. Phasellus blandit lacus ac elementum luctus. Curabitur lacinia luctus porta. Donec semper metus nec ligula dictum, nec bibendum elit efficitur. Phasellus mauris purus, volutpat ut congue quis, mollis sed augue. Etiam facilisis tortor id urna semper, a lobortis mauris vehicula. Suspendisse quam libero, imperdiet ut cursus quis, dignissim sit amet ex. Fusce libero mi, rhoncus a dignissim eget, viverra in tortor.</p>
+					<p>Proin risus elit, ornare in tempus nec, auctor et sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse ligula urna, efficitur pellentesque molestie et, blandit at elit. Nullam elit nunc, porttitor id blandit nec, bibendum rutrum ante. Etiam et posuere orci. Pellentesque sed lectus finibus, lobortis tortor vitae, commodo tellus. Nulla urna tortor, bibendum et elit id, dictum vehicula velit. Morbi eleifend iaculis massa in imperdiet. Aliquam id ultrices eros. Aenean blandit, sapien at aliquam dictum, massa quam eleifend turpis, nec laoreet ligula elit id risus. Proin massa metus, venenatis at luctus pulvinar, efficitur a turpis. Mauris et posuere leo. Fusce vitae convallis nisl, et sollicitudin urna.</p>
+				</div>
+				<div id="modules" class="container" style="display: none">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./images/pacman.png" class="img-fluid rounded-start" alt="pacman screenshot">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<a href="#" class="card-title fs-5 fw-bold">Pacman Game</a>
+									<p class="card-text pt-2">This is from module 8, the Pacman game demo.  Clicking on "Add Pacman", adds a new pacman to the screen.  The button "Start Game", starts the Pacmans moving across the scereen whilek chomping their mouths.  When they hit the left or right side of the screen, they turn around and start towards the opposite side of the screen.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./images/eyes.png" class="img-fluid rounded-start" alt="eyes screenshot">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<a href="#" class="card-title fs-5 fw-bold">Eyes demo</a>
+									<p class="card-text pt-2">This is the eyes demo.  The two eyes follow the cursor around the screen.  A random amount of time, from 500ms to 5500ms the eyes will blink.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./images/bustracker.png" class="img-fluid rounded-start" alt="bus tracker screenshot">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<a href="#" class="card-title fs-5 fw-bold">Real Time Bus Tracker</a>
+									<p class="card-text pt-2">This is a real time bus tracker for the Phoenix Valley Metro system to show the route of ten busses as they travel through city of Phoenix Arizona.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 	</body>
 </html>
+
