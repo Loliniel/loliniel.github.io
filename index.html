@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-	<html lang="en/us">
+	<html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Alice's Portfolio</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="./style/style.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<link href="./style/style.css" rel="stylesheet">
 		<script>
 			function showModules() {
 				document.getElementById("bio").style.display = "none";
@@ -22,18 +23,17 @@
 		<div class="container">
 			<header class="py-3">
 				<div class="p-3">
-					<img src="./images/mametchi-pic01.png" style="width: 120px;" id="mametchi" alt="me irl" />
+					<img src="./images/mametchi-pic01.png" style="width: 120px;" id="mametchi" alt="me irl">
 					<a href="#" onclick="showBio()" class="h2 p-4" style="text-decoration: none">Alice's Portfolio</a>
 				</div>
 				<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 					<div class="container-fluid fs-4 fw-bold">
-						</button>
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<div class="navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 								<li class="nav-item px-3"><a class="nav-link link-light" href="#" onclick="showBio()">Bio</a></li>
 								<li class="nav-item px-3"><a class="nav-link link-light" href="#" onclick="showModules()">Modules</a></li>
 								<li class="nav-item px-3 dropdown">
-									<a href="#" class="nav-link dropdown-toggle link-light" id="navbar-socials" role="button" data-bs-toggle="dropdown" aria-expanded="false">Social Media</a>
+									<a href="#" class="nav-link dropdown-toggle link-light" id="navbar-socials" role="button" data-bs-toggle="dropdown" data-bs-target="#navbarSupportedContent" aria-expanded="false">Social Media</a>
 									<ul class="dropdown-menu bg-secondary" aria-labelledby="navbar-socials">
 										<li><a href="https://github.com/Loliniel" class="dropdown-item link-light fw-bold">Github</a></li>
 										<li><a href="https://www.linkedin.com/in/alicegeus/" class="dropdown-item link-light fw-bold">Linkedin</a></li>
@@ -51,7 +51,7 @@
 					<h1>Bio</h1>
 					<iframe src="https://www.youtube.com/embed/eonioxUaAzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					<p id="p-one">My name is Alice Geus.  I was born and raised in Arizona, but recently moved to the Boston area.  I've worked as a service technician at Fry's Electronics, and currently as an Insurance Specialist at McKesson.  I've done computer programming since the late 1990s.  I know C, PHP, Javascript, and markup languages such as HTML, and CSS.</p>
-					<img src="./images/me.png" id="me" alt="me" />
+					<img src="./images/me.png" id="me" alt="me">
 					<div id="p-two">
 						<h5>Ways to reach me.  E-mail is preferred.</h5>
 						<ul>
@@ -106,5 +106,6 @@
 					</div>
 				</div>
 			</main>
+		</div>
 	</body>
 </html>
