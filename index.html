@@ -1,24 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 	<html lang="en/us">
 	<head>
 		<meta charset="utf-8" />
 		<title>Alice's Portfolio</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="./style/style.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-		<style>
-			a {
-				color: #FFFFFF;
-			}
-		</style>
 		<script>
 			function showModules() {
 				document.getElementById("bio").style.display = "none";
-				document.getElementById("modules").style.display = "block";
+				document.getElementById("projects").style.display = "block";
 			}
 
 			function showBio() {
-				document.getElementById("modules").style.display = "none";
-				document.getElementById("bio").style.display = "block";
+				document.getElementById("projects").style.display = "none";
+				document.getElementById("bio").style.display = "grid";
 			}
 		</script>
 	</head>
@@ -26,8 +22,8 @@
 		<div class="container">
 			<header class="py-3">
 				<div class="p-3">
-					<img src="./images/mametchi-pic01.png" style="width: 120px;" alt="me irl" />
-					<span class="h2 p-4">Alice's Portfolio</span>
+					<img src="./images/mametchi-pic01.png" style="width: 120px;" id="mametchi" alt="me irl" />
+					<a href="#" onclick="showBio()" class="h2 p-4" style="text-decoration: none">Alice's Portfolio</a>
 				</div>
 				<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 					<div class="container-fluid fs-4 fw-bold">
@@ -52,11 +48,23 @@
 			</header>
 			<main class="container">
 				<div id="bio" class="container">
-					<h2>Bio</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida, augue vitae posuere egestas, ante nisi eleifend magna, dictum scelerisque urna libero id lorem. Duis magna magna, malesuada sed commodo non, facilisis sit amet risus. Duis varius cursus urna quis tincidunt. Pellentesque nisl lorem, malesuada vitae eros ac, fermentum vestibulum augue. Phasellus blandit lacus ac elementum luctus. Curabitur lacinia luctus porta. Donec semper metus nec ligula dictum, nec bibendum elit efficitur. Phasellus mauris purus, volutpat ut congue quis, mollis sed augue. Etiam facilisis tortor id urna semper, a lobortis mauris vehicula. Suspendisse quam libero, imperdiet ut cursus quis, dignissim sit amet ex. Fusce libero mi, rhoncus a dignissim eget, viverra in tortor.</p>
-					<p>Proin risus elit, ornare in tempus nec, auctor et sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse ligula urna, efficitur pellentesque molestie et, blandit at elit. Nullam elit nunc, porttitor id blandit nec, bibendum rutrum ante. Etiam et posuere orci. Pellentesque sed lectus finibus, lobortis tortor vitae, commodo tellus. Nulla urna tortor, bibendum et elit id, dictum vehicula velit. Morbi eleifend iaculis massa in imperdiet. Aliquam id ultrices eros. Aenean blandit, sapien at aliquam dictum, massa quam eleifend turpis, nec laoreet ligula elit id risus. Proin massa metus, venenatis at luctus pulvinar, efficitur a turpis. Mauris et posuere leo. Fusce vitae convallis nisl, et sollicitudin urna.</p>
+					<h1>Bio</h1>
+					<iframe src="https://www.youtube.com/embed/eonioxUaAzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<p id="p-one">My name is Alice Geus.  I was born and raised in Arizona, but recently moved to the Boston area.  I've worked as a service technician at Fry's Electronics, and currently as an Insurance Specialist at McKesson.  I've done computer programming since the late 1990s.  I know C, PHP, Javascript, and markup languages such as HTML, and CSS.</p>
+					<img src="./images/me.png" id="me" alt="me" />
+					<div id="p-two">
+						<h5>Ways to reach me.  E-mail is preferred.</h5>
+						<ul>
+							<li><span>E-mail: <a href="mailto:loliniel@gmail.com">loliniel@gmail.com</a></span></li>
+							<li><span>Github: <a href="https://loliniel.github.io/">Loliniel</a></span></li>
+							<li><span>Youtube: <a href="https://www.youtube.com/@AliceGeus">Alice Geus</a></span></li>
+							<li><span>Phone: <a href="tel:602-570-0615">602-570-0615</a></span></li>
+							<li><span>Linkedin: <a href="https://www.linkedin.com/in/alicegeus/">Linkedin</a></span></li>
+							<li><span>Website: <a href="https://www.rentalcorgis.com/">Rental Corgis</a></span></li>
+						</ul>
+					</div>
 				</div>
-				<div id="modules" class="container" style="display: none">
+				<div id="projects" class="container" style="display: none">
 					<div class="card mb-3">
 						<div class="row g-0">
 							<div class="col-md-4">
@@ -64,7 +72,7 @@
 							</div>
 							<div class="col-md-8">
 								<div class="card-body">
-									<a href="#" class="card-title fs-5 fw-bold">Pacman Game</a>
+									<a href="https://github.com/Loliniel/PacMen" class="card-title fs-5 fw-bold">Pacman Game</a>
 									<p class="card-text pt-2">This is from module 8, the Pacman game demo.  Clicking on "Add Pacman", adds a new pacman to the screen.  The button "Start Game", starts the Pacmans moving across the scereen whilek chomping their mouths.  When they hit the left or right side of the screen, they turn around and start towards the opposite side of the screen.</p>
 								</div>
 							</div>
@@ -77,7 +85,7 @@
 							</div>
 							<div class="col-md-8">
 								<div class="card-body">
-									<a href="#" class="card-title fs-5 fw-bold">Eyes demo</a>
+									<a href="https://github.com/Loliniel/eyes" class="card-title fs-5 fw-bold">Eyes demo</a>
 									<p class="card-text pt-2">This is the eyes demo.  The two eyes follow the cursor around the screen.  A random amount of time, from 500ms to 5500ms the eyes will blink.</p>
 								</div>
 							</div>
@@ -100,4 +108,3 @@
 			</main>
 	</body>
 </html>
-
